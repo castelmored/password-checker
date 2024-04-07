@@ -2,8 +2,9 @@ import requests
 import hashlib
 import sys
 
+file_with_passwords = sys.argv[1]
 data = []
-with open('passwordsToCheck.txt') as inp:
+with open(file_with_passwords) as inp:
     for line in inp:
         data.append(line[:-1] if '\n' in line else line)
 
